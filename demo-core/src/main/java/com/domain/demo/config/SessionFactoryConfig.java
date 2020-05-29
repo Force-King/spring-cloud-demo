@@ -52,7 +52,7 @@ public class SessionFactoryConfig {
             return sqlSessionFactoryBean;
         }
         catch(IOException ex){
-            logger.error("Error happens when getting config files." + ExceptionUtils.getMessage(ex));
+            logger.error(ExceptionUtils.getMessage(ex));
         }
         return null;
     }

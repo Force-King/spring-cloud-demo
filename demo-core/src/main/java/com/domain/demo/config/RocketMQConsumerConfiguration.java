@@ -53,10 +53,9 @@ public class RocketMQConsumerConfiguration implements ApplicationListener<Contex
     }
   
     private void init() throws MQClientException{
-//      logger.info("------------------- Starting " + topic + ":" + tag + " Consummer Begin -------------------");
       DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(groupName); 
       consumer.setNamesrvAddr(namesrvAddr); 
-      consumer.subscribe(topic, tag); // 开启内部类实现监听 
+      consumer.subscribe(topic, tag);
       consumer.setConsumeThreadMax(consumeThreadMax);
       consumer.setConsumeThreadMin(consumeThreadMin);
       consumer.setMessageListener(new MessageListenerConcurrently() {
@@ -69,9 +68,8 @@ public class RocketMQConsumerConfiguration implements ApplicationListener<Contex
                logger.debug("deal mq {}" , msgStr);
                messageProcessor.dealMqMessage(msg);
             } catch (Exception e) {
-                //TODO 这里应该返回RECONSUME_LATER，MQ会重新消费，不过业务要做好幂等，待改进。。。say by CleverApe
-                //return ConsumeConcurrentlyStatus.RECONSUME_LATER;
                 logger.warn("deal mq failed, Exception:" , e);
+                return ConsumeConcurrentlyStatus.RECONSUME_LATER;
             }
           }
           return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
