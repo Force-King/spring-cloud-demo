@@ -4,7 +4,7 @@ package com.br.demo.util;
 import com.br.demo.enums.RequestResultEnum;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname RestApiResult
  * @Description api返回结果对象
  * @Date 2019-03-05 15:49

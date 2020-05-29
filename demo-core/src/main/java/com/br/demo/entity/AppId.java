@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 /**
  * @Description AppId
  * @Classname AppId
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-27 16:47
  * @Version V1.0
  */

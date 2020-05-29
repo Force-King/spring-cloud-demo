@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 /**
  * @Description 用户DAO
  * @Classname UserDao
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-27 16:47
  * @Version V1.0
  */

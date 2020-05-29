@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @Description 用户RestApi
  * @Classname IUserRestApi
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 13:17
  * @Version V1.0
  */

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname IndexController
  * @Description 首页
  * @Date 2019-07-10 17:56

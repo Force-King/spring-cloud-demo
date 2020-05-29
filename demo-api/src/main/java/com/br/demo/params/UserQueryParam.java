@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 /**
  * @Description 用户查询接口入参
  * @Classname UserQueryParam
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-27 18:49
  * @Version V1.0
  */

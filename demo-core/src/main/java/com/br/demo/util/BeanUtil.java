@@ -6,7 +6,7 @@ import org.springframework.beans.BeanUtils;
 /**
  * @Description Bean转换工具类
  * @Classname BeanUtil
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 13:46
  * @Version V1.0
  */

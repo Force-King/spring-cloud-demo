@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname DemoMQMessageProcessorImpl
  * @Description RocketMQ消息消费者 处理类实现Demo
  * @Date 2019-07-16

@@ -5,7 +5,7 @@ import com.br.demo.util.ResultInterface;
 /**
  * @Description Api返回结果码
  * @Classname RequestResultEnum
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 12:18
  * @Version V1.0
  */

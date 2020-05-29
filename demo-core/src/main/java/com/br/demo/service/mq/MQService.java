@@ -1,7 +1,7 @@
 package com.br.demo.service.mq;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname MQService
  * @Description RocketMQ 接口
  * @Date 2019-07-26 16:25

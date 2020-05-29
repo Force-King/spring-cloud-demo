@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @Description 用户Rest接口实现
  * @Classname UserController
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-14 14:31
  * @Version V1.0
  */

@@ -69,7 +69,7 @@ public class RocketMQConsumerConfiguration implements ApplicationListener<Contex
                logger.debug("deal mq {}" , msgStr);
                messageProcessor.dealMqMessage(msg);
             } catch (Exception e) {
-                //TODO 这里应该返回RECONSUME_LATER，MQ会重新消费，不过业务要做好幂等，待改进。。。say by guifei.qin
+                //TODO 这里应该返回RECONSUME_LATER，MQ会重新消费，不过业务要做好幂等，待改进。。。say by CleverApe
                 //return ConsumeConcurrentlyStatus.RECONSUME_LATER;
                 logger.warn("deal mq failed, Exception:" , e);
             }

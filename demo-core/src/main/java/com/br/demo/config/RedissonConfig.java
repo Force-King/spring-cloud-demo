@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname RedissonConfig
  * @Description Redisson客户端初始化Bean
  * @Date 2019-07-17 10:28

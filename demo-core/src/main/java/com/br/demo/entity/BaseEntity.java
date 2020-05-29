@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @Description 基础实体属性
  * @Classname BaseEntity
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-27 16:47
  * @Version V1.0
  */

@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 /**
  * @Description 用户更新接口入参
  * @Classname UserUpdateParam
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 14:08
  * @Version V1.0
  */

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @Description 用户服务Client
  * @Classname UserClient
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 15:26
  * @Version V1.0
  */

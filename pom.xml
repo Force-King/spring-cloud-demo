@@ -214,15 +214,15 @@
             </properties>
         </profile>
         <profile>
-            <id>prepub</id>
+            <id>gray</id>
             <properties>
-                <profileActive>prepub</profileActive>
+                <profileActive>gray</profileActive>
             </properties>
         </profile>
         <profile>
-            <id>publish</id>
+            <id>online</id>
             <properties>
-                <profileActive>publish</profileActive>
+                <profileActive>online</profileActive>
             </properties>
         </profile>
     </profiles>
@@ -256,19 +256,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>100credit_release</id>-->
-            <!--<name>Nexus Release Repository</name>-->
-            <!--<url>http://192.168.162.106:8081/nexus/content/repositories/releases/</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>100credit_snapshots</id>-->
-            <!--<name>Nexus Snapshot Repository</name>-->
-            <!--<url>http://192.168.162.106:8081/nexus/content/repositories/snapshots/</url>-->
-        <!--</snapshotRepository>-->
-    <!--</distributionManagement>-->
 
 
 </project>

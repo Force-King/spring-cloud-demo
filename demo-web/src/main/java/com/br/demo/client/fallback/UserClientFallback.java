@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Description 用户服务接口-熔断、降级
  * @Classname UserClientFallback
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-29 15:56
  * @Version V1.0
  */

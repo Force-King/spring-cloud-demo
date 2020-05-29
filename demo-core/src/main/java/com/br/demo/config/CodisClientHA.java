@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname CodisClientHA
  * @Description Codis客户端高可用封装
  * @Date 2019-07-16

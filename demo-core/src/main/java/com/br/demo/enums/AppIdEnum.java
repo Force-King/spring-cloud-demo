@@ -1,7 +1,7 @@
 package com.br.demo.enums;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname AppIdEnum
  * @Description AppId枚举
  * @Date 2019-07-16

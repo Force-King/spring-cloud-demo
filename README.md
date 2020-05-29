@@ -1,12 +1,13 @@
 # Spring Cloud Demo
 
-## spring cloud project demo. 
 
 ### 一、本项目包含
 
 #### 1. 服务注册与发现
 
- 集成Nacos作为服务注册中心
+ - 集成Nacos作为服务注册中心
+ - 集成Feign
+ - 熔断、降级
 
 #### 2. 日志集成 ELK
 

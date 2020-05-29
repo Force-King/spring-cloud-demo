@@ -3,7 +3,7 @@ package com.br.demo.util;
 import java.io.Serializable;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname HttpClientResult
  * @Description Http请求结果对象
  * @Date 2019-07-17

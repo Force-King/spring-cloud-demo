@@ -7,9 +7,9 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 
 /**
- * @Description TODO
+ * @Description 用户Dto
  * @Classname UserDto
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-28 18:13
  * @Version V1.0
  */

@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname HttpClientUtils
  * @Description Http请求工具类
  * @Date 2019-07-17

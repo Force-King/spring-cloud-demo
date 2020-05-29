@@ -6,7 +6,7 @@ import org.springframework.beans.BeanUtils;
 /**
  * @Description TODO
  * @Classname ResultUtil
- * @Author guifei.qin
+ * @Author CleverApe
  * @Date 2020-05-28 18:25
  * @Version V1.0
  */

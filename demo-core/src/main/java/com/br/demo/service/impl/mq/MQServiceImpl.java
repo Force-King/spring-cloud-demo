@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 
 /**
- * @author guifei.qin
+ * @author CleverApe
  * @Classname MQServiceImpl
  * @Description RocketMQ 接口实现
  * @Date 2019-07-26 16:31
