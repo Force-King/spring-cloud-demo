@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @Description 用户Dto
- * @Classname UserDto
+ * @Classname UserDTO
  * @Author CleverApe
  * @Date 2020-05-28 18:13
  * @Version V1.0
@@ -16,7 +16,9 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UserDto implements Serializable {
+public class UserDTO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 用户id

@@ -1,6 +1,6 @@
 package com.domain.demo.vo;
 
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -20,9 +20,11 @@ import java.util.List;
 @Accessors(chain = true)
 public class IndexVo implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     private String str;
 
     private List productList;
 
-    private UserDto userInfo;
+    private UserDTO userInfo;
 }

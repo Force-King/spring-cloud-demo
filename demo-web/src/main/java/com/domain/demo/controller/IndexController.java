@@ -3,7 +3,7 @@ package com.domain.demo.controller;
 
 import com.domain.demo.api.IUserRestApi;
 import com.domain.demo.client.UserClient;
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.util.RestApiResult;
 import com.domain.demo.vo.IndexVo;
@@ -40,7 +40,7 @@ public class IndexController {
     public RestApiResult<IndexVo> index(@RequestParam Integer uid) {
         RestApiResult<IndexVo> ret = new RestApiResult();
         UserQueryParam userQueryParam = new UserQueryParam().setUid(uid);
-        RestApiResult<UserDto> userDto = userClient.getByUid(userQueryParam);
+        RestApiResult<UserDTO> userDto = userClient.getByUid(userQueryParam);
         IndexVo indexVo = new IndexVo().setStr("首页").setProductList(null).setUserInfo(userDto.getData());
         logger.info("进入index方法，uid={}",uid);
         return ret.success(indexVo);

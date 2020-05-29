@@ -1,6 +1,6 @@
 package com.domain.demo.api;
 
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.params.UserUpdateParam;
 import com.domain.demo.util.RestApiResult;
@@ -22,7 +22,7 @@ public interface IUserRestApi {
 
 
     @PostMapping("/getByUid")
-    RestApiResult<UserDto> getByUid(@Validated @RequestBody UserQueryParam param);
+    RestApiResult<UserDTO> getByUid(@Validated @RequestBody UserQueryParam param);
 
     @PostMapping("/addUser")
     String addUser(@RequestParam UserUpdateParam param);

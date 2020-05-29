@@ -1,7 +1,7 @@
 package com.domain.demo.controller;
 
 import com.domain.demo.api.IUserRestApi;
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.params.UserUpdateParam;
 import com.domain.demo.service.UserService;
@@ -33,9 +33,9 @@ public class UserController implements IUserRestApi {
 
     @ApiOperation("查询用户")
     @Override
-    public RestApiResult<UserDto> getByUid(@Validated @RequestParam UserQueryParam param) {
+    public RestApiResult<UserDTO> getByUid(@Validated @RequestParam UserQueryParam param) {
         try{
-            return RestResultUtil.success(userService.getUserById(param.getUid()),UserDto.class);
+            return RestResultUtil.success(userService.getUserById(param.getUid()), UserDTO.class);
         } catch (Exception e) {
             log.error("e:",e);
         }

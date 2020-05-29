@@ -1,7 +1,7 @@
 package com.domain.demo.client;
 
 import com.domain.demo.client.fallback.UserClientFallback;
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.util.RestApiResult;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -22,5 +22,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface UserClient {
 
     @PostMapping("/getByUid")
-    RestApiResult<UserDto> getByUid(@Validated @RequestBody UserQueryParam param);
+    RestApiResult<UserDTO> getByUid(@Validated @RequestBody UserQueryParam param);
 }

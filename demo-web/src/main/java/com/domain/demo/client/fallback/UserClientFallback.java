@@ -1,7 +1,7 @@
 package com.domain.demo.client.fallback;
 
 import com.domain.demo.client.UserClient;
-import com.domain.demo.dto.UserDto;
+import com.domain.demo.dto.UserDTO;
 import com.domain.demo.enums.RequestResultEnum;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.util.RestApiResult;
@@ -22,7 +22,7 @@ public class UserClientFallback implements FallbackFactory<UserClient> {
     public UserClient create(Throwable throwable) {
         return new UserClient() {
             @Override
-            public RestApiResult<UserDto> getByUid(UserQueryParam param) {
+            public RestApiResult<UserDTO> getByUid(UserQueryParam param) {
                 return RestApiResult.buildEnum(RequestResultEnum.SERVER_BUSY);
             }
         };
