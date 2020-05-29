@@ -27,7 +27,7 @@ public class Swagger2 {
                 .apiInfo(apiInfo())
                 .select()
                 //扫描包下文件
-                .apis(RequestHandlerSelectors.basePackage("com.baironginc.lianmeng.core"))
+                .apis(RequestHandlerSelectors.basePackage(""))
                 //扫描@Api注解的类
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 //扫描@ApiOperation注解的方法
