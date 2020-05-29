@@ -16,7 +16,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * @Date 2019-07-16
  * @Version V1.0
  */
-@Configuration
+//@Configuration
 public class CodisClientHA {
 
     private Logger logger = LogManager.getLogger(CodisClientHA.class);

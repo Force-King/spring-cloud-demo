@@ -17,7 +17,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 
 import java.util.List;
 
-@SpringBootConfiguration
+//@SpringBootConfiguration
 public class RocketMQConsumerConfiguration implements ApplicationListener<ContextRefreshedEvent> {
 
     private Logger logger = LogManager.getLogger(RocketMQConsumerConfiguration.class);

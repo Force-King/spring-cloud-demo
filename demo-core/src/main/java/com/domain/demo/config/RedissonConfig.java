@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2019-07-17 10:28
  * @Version V1.0
  */
-@Configuration
+//@Configuration
 public class RedissonConfig {
 
     private static Logger logger = LogManager.getLogger(RedissonConfig.class);
