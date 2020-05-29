@@ -1,0 +1,9 @@
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: demo
+server:
+  port: 9000
+
