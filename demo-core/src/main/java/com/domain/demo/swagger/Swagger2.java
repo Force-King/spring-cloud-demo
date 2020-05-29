@@ -12,10 +12,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/**
- * @author : panshenying
- * create at:  2019/9/27
- */
+
 @Configuration
 @EnableSwagger2
 public class Swagger2 {
@@ -39,8 +36,8 @@ public class Swagger2 {
     //接口文档的描述
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("联盟核心模块")
-                .description("联盟核心模块，所有业务对外提供访问的接口")
+                .title("demo")
+                .description("描述")
                 .version("1.0")
                 .build();
     }
