@@ -3,12 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.br.demo</groupId>
+        <groupId>com.domain.demo</groupId>
         <artifactId>demo-all</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.br.demo</groupId>
+    <groupId>com.domain.demo</groupId>
     <artifactId>demo-core</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -16,11 +16,11 @@
     <dependencies>
         <!--公共jar-->
         <dependency>
-            <groupId>com.br.demo</groupId>
+            <groupId>com.domain.demo</groupId>
             <artifactId>demo-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.br.demo</groupId>
+            <groupId>com.domain.demo</groupId>
             <artifactId>demo-api</artifactId>
         </dependency>
 
