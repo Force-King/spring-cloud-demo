@@ -1,60 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration>
 <configuration>
-    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
-
-    <springProperty scope="context" name="projectName"
-                    source="spring.application.name" />
-
-    <!-- 日志在工程中的输出位置 -->
-    <property name="LOG_FILE" value="${BUILD_FOLDER:-build}/${projectName}" />
-
-    <!-- 控制台的日志输出样式 -->
-    <property name="CONSOLE_LOG_PATTERN"
-              value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}" />
-
-    <!-- 控制台输出 -->
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
-        </filter>
-        <!-- 日志输出编码 -->
+    <springProperty scope="context" name="logLevel" source="log.level"/>
+    <springProperty scope="context" name="logPath" source="log.path"/>
+    <!--控制台日志输出配置-->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <!--对输出日志进行格式化-->
         <encoder>
-            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
-            <charset>utf8</charset>
+            <!-- %d日期,%p日志级别,%file文件名,%line所在行数,%m输出的信息,%n换行 -->
+            <pattern>%d %p [%thread] (%file:%line\)- %m%n</pattern>
+            <!--字符编码-->
+            <charset>UTF-8</charset><!--此处设置字符集-->
         </encoder>
     </appender>
 
-    <!-- 为logstash输出的JSON格式的Appender -->
-    <appender name="logstash"
-              class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>127.0.0.1:4560</destination>
-        <!-- 日志输出编码 -->
-        <encoder
-                class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
-            <providers>
-                <timestamp>
-                    <timeZone>UTC</timeZone>
-                </timestamp>
-                <pattern>
-                    <pattern>
-                        {
-                        "severity": "%level",
-                        "project": "${projectName:-}",
-                        "pid": "${PID:-}",
-                        "thread": "%thread",
-                        "class": "%logger{40}",
-                        "message": "%message"
-                        }
-                    </pattern>
-                </pattern>
-            </providers>
+    <!--日志文件配置-->
+    <appender name="logfile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}logfile.log</File>
+        <!--滚动记录文件：根据时间来制定滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}logfile.log.%d.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>64 MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d %p (%file:%line\)- %m%n
+            </pattern>
+            <charset>UTF-8</charset> <!-- 此处设置字符集 -->
         </encoder>
     </appender>
-
-    <!-- 日志输出级别 -->
-    <root level="INFO">
-        <appender-ref ref="console" />
-        <appender-ref ref="logstash" />
+    <logger name="com.domain.demo" level="${logLevel}">
+        <appender-ref ref="logfile" />
+    </logger>
+    <!--指定日志输出等级-->
+    <root level="${logLevel}">
+        <appender-ref ref="stdout" />
     </root>
 </configuration>

@@ -28,8 +28,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/index")
 public class IndexController {
 
-    private static Logger logger = LogManager.getLogger(IndexController.class);
-
     @Autowired
     private IUserRestApi userRestApi;
 
@@ -42,7 +40,7 @@ public class IndexController {
         UserQueryParam userQueryParam = new UserQueryParam().setUid(uid);
         RestApiResult<UserDTO> userDto = userClient.getByUid(userQueryParam);
         IndexVo indexVo = new IndexVo().setStr("首页").setProductList(null).setUserInfo(userDto.getData());
-        logger.info("进入index方法，uid={}",uid);
+        log.info("进入index方法，uid={}",uid);
         return ret.success(indexVo);
     }
 

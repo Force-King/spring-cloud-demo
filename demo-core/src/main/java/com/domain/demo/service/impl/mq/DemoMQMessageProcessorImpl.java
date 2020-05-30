@@ -79,10 +79,6 @@ public class DemoMQMessageProcessorImpl implements MessageProcessor {
               logger.warn("checkMsgBody uid is empty or uid is not 0, body: {}", body.toJSONString());
               return false;
           }
-          if (!body.containsKey("appId")) {
-              logger.warn("checkMsgBody appId is empty, body: {}", body.toJSONString());
-              return false;
-          }
         } catch (Exception e) {
           logger.error("checkBody exception e" , e);
         }

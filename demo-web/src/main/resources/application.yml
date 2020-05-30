@@ -1,9 +1,18 @@
+server:
+  port: 8080
 
 spring:
   profiles:
     active: dev
   application:
-    name: demo-web
-server:
-  port: 9000
+    name: web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+      config:
+        server-addr: http://localhost:8848
+        grop: DEFAULT_GROUP
+        file-extension: yaml
+        prefix: demo
 

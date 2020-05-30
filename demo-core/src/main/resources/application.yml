@@ -1,9 +1,29 @@
-
+server:
+  port: 9000
 spring:
   profiles:
     active: dev
   application:
     name: core-service
-server:
-  port: 8880
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+        config:
+          server-addr: http://localhost:8848
+          grop: DEFAULT_GROUP
+          file-extension: yaml
+          prefix: demo
 
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+
+#feign:
+#  hystrix:
+#    enabled: true
+#ribbon:
+#  ConnectTimeout: 10000
+#  ReadTimeout: 10000
