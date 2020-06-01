@@ -1,6 +1,6 @@
-package com.domain.demo.client.fallback;
+package com.domain.demo.remote.client.fallback;
 
-import com.domain.demo.client.UserClient;
+import com.domain.demo.remote.client.UserClient;
 import com.domain.demo.dto.UserDTO;
 import com.domain.demo.enums.RequestResultEnum;
 import com.domain.demo.params.UserQueryParam;

@@ -1,15 +1,11 @@
 package com.domain.demo.controller;
 
-
-import com.domain.demo.api.IUserRestApi;
-import com.domain.demo.client.UserClient;
+import com.domain.demo.remote.client.UserClient;
 import com.domain.demo.dto.UserDTO;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.util.RestApiResult;
 import com.domain.demo.vo.IndexVo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,9 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequestMapping("/index")
 public class IndexController {
-
-    @Autowired
-    private IUserRestApi userRestApi;
 
     @Autowired
     private UserClient userClient;
