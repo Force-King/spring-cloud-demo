@@ -1,7 +1,8 @@
-
+#nacos 命名空间
 spring:
-  #nacos
   cloud:
     nacos:
+      discovery:
+        namespace: public
       config:
         namespace: public

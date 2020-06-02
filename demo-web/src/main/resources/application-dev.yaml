@@ -1,7 +1,9 @@
-
+#nacos 命名空间
 spring:
-  #nacos
   cloud:
     nacos:
+      discovery:
+        namespace: 8b4cd4e4-c018-42a7-a8e2-e3c724e6d80b
       config:
-        namespace: dev
+        namespace: 8b4cd4e4-c018-42a7-a8e2-e3c724e6d80b
+
