@@ -34,8 +34,8 @@ import javax.sql.DataSource;
 import java.util.*;
 
 
-@Configuration
-@EnableTransactionManagement
+//@Configuration
+//@EnableTransactionManagement
 public class DruidConfig implements EnvironmentAware {
 
     private List<String> customDataSourceNames = new ArrayList<String>();

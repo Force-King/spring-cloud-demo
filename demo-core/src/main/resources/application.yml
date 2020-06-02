@@ -1,19 +1,21 @@
 server:
   port: 9000
+
 spring:
   profiles:
-    active: dev
+    active: @profileActive@
   application:
     name: core-service
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-        config:
-          server-addr: ocalhost:8848
-          grop: DEFAULT_GROUP
-          file-extension: yaml
-          prefix: demo
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        group: DEFAULT_GROUP
+        prefix: core
+        file-extension: properties
+
 
   main:
     allow-bean-definition-overriding: true
@@ -21,9 +23,20 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: true
 
-#feign:
-#  hystrix:
-#    enabled: true
-#ribbon:
-#  ConnectTimeout: 10000
-#  ReadTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+feign:
+  hystrix:
+    enabled: true
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
+
+logging:
+  config: classpath:logback-spring.xml
+  path: /opt/logs/demo-core/

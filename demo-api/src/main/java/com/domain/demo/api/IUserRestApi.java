@@ -8,7 +8,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Description 用户RestApi
@@ -25,9 +24,9 @@ public interface IUserRestApi {
     RestApiResult<UserDTO> getByUid(@Validated @RequestBody UserQueryParam param);
 
     @PostMapping("/addUser")
-    String addUser(@RequestParam UserUpdateParam param);
+    String addUser(@RequestBody UserUpdateParam param);
 
     @PostMapping("/updateUser")
-    String updateUser(@RequestParam UserUpdateParam param);
+    String updateUser(@RequestBody UserUpdateParam param);
 
 }

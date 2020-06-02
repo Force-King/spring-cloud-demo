@@ -33,7 +33,7 @@ public class UserController implements IUserRestApi {
 
     @ApiOperation("查询用户")
     @Override
-    public RestApiResult<UserDTO> getByUid(@Validated @RequestParam UserQueryParam param) {
+    public RestApiResult<UserDTO> getByUid(@Validated @RequestBody UserQueryParam param) {
         try{
             return RestResultUtil.success(userService.getUserById(param.getUid()), UserDTO.class);
         } catch (Exception e) {
@@ -44,13 +44,13 @@ public class UserController implements IUserRestApi {
 
     @ApiOperation("新增用户")
     @Override
-    public String addUser(@Validated @RequestParam UserUpdateParam param) {
+    public String addUser(@Validated @RequestBody UserUpdateParam param) {
         return null;
     }
 
     @ApiOperation("更新用户")
     @Override
-    public String updateUser(@Validated @RequestParam UserUpdateParam param) {
+    public String updateUser(@Validated @RequestBody UserUpdateParam param) {
         return null;
     }
 }

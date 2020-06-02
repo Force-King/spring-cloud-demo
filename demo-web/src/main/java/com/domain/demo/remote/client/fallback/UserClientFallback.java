@@ -6,6 +6,7 @@ import com.domain.demo.enums.RequestResultEnum;
 import com.domain.demo.params.UserQueryParam;
 import com.domain.demo.util.RestApiResult;
 import feign.hystrix.FallbackFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,10 +17,12 @@ import org.springframework.stereotype.Component;
  * @Version V1.0
  */
 @Component
+@Slf4j
 public class UserClientFallback implements FallbackFactory<UserClient> {
 
     @Override
     public UserClient create(Throwable throwable) {
+        log.error("异常信息：", throwable.getMessage());
         return new UserClient() {
             @Override
             public RestApiResult<UserDTO> getByUid(UserQueryParam param) {

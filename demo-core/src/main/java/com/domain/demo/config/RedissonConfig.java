@@ -28,7 +28,7 @@ public class RedissonConfig {
     @Value("${spring.redis.port}")
     private String redisPort;
 
-    @Bean
+//    @Bean
     public RedissonClient getRedisson() {
         Config config = new Config();
         config.setTransportMode(TransportMode.EPOLL);

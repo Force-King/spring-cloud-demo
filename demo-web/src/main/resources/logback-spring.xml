@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <springProperty scope="context" name="logLevel" source="log.level"/>
-    <springProperty scope="context" name="logPath" source="log.path"/>
+    <springProperty scope="context" name="logPath" source="logging.path"/>
     <!--控制台日志输出配置-->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-        <!--对输出日志进行格式化-->
         <encoder>
-            <!-- %d日期,%p日志级别,%file文件名,%line所在行数,%m输出的信息,%n换行 -->
             <pattern>%d %p [%thread] (%file:%line\)- %m%n</pattern>
-            <!--字符编码-->
-            <charset>UTF-8</charset><!--此处设置字符集-->
+            <charset>UTF-8</charset>
         </encoder>
     </appender>
 
     <!--日志文件配置-->
     <appender name="logfile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logPath}logfile.log</File>
-        <!--滚动记录文件：根据时间来制定滚动策略-->
+        <File>${logPath}demo-web.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}logfile.log.%d.%i</fileNamePattern>
+            <fileNamePattern>${logPath}demo-web.%d.%i</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>64 MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
@@ -28,14 +23,14 @@
             <pattern>
                 %d %p (%file:%line\)- %m%n
             </pattern>
-            <charset>UTF-8</charset> <!-- 此处设置字符集 -->
+            <charset>UTF-8</charset>
         </encoder>
     </appender>
-    <logger name="com.domain.demo" level="${logLevel}">
+    <logger name="com.br.demo" level="info">
         <appender-ref ref="logfile" />
     </logger>
     <!--指定日志输出等级-->
-    <root level="${logLevel}">
+    <root level="info">
         <appender-ref ref="stdout" />
     </root>
 </configuration>
