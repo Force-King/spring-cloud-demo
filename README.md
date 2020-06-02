@@ -7,8 +7,8 @@
 
  - 集成Nacos作为服务注册中心
  - 集成Nacos 配置中心
- - 集成Feign、ribbon
- - hystrix熔断、降级
+ - 集成Feign、Ribbon
+ - Hystrix熔断、降级
 
 #### 2. 日志集成 ELK
 
