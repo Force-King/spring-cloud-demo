@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 2020-05-29 15:26
  * @Version V1.0
  */
-@FeignClient(value = "core-service", fallbackFactory = UserClientFallback.class)
+@FeignClient(value = "demo-core", fallbackFactory = UserClientFallback.class)
 @RequestMapping("/user")
 public interface UserClient {
 

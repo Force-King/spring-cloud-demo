@@ -22,7 +22,7 @@ public class UserClientFallback implements FallbackFactory<UserClient> {
 
     @Override
     public UserClient create(Throwable throwable) {
-        log.error("异常信息：", throwable.getMessage());
+        log.error("异常信息：{}", throwable.toString());
         return new UserClient() {
             @Override
             public RestApiResult<UserDTO> getByUid(UserQueryParam param) {
