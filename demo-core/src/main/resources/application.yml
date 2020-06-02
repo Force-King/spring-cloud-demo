@@ -16,6 +16,9 @@ spring:
         prefix: core
         file-extension: properties
 
+  aop:
+    auto: true
+    proxy-target-class: true
 
   main:
     allow-bean-definition-overriding: true
