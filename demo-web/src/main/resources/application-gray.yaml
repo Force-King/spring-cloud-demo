@@ -1,8 +1,0 @@
-#nacos 命名空间
-spring:
-  cloud:
-    nacos:
-      discovery:
-        namespace: public
-      config:
-        namespace: public

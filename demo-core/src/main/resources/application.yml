@@ -2,16 +2,19 @@ server:
   port: 9000
 
 spring:
-  profiles:
-    active: @profileActive@
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
         group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
       config:
         group: DEFAULT_GROUP
         file-extension: properties
+        username: nacos
+        password: nacos
+        contextPath: /nacos
 
   aop:
     auto: true

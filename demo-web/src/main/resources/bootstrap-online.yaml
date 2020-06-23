@@ -1,0 +1,8 @@
+#nacos 命名空间
+spring:
+  cloud:
+    nacos:
+      discovery:
+        namespace: a80359c6-2b80-474f-886c-f0bdd52ae7d6
+      config:
+        namespace: a80359c6-2b80-474f-886c-f0bdd52ae7d6
