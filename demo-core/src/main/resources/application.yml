@@ -12,9 +12,6 @@ spring:
       config:
         group: DEFAULT_GROUP
         file-extension: properties
-        username: nacos
-        password: nacos
-        contextPath: /nacos
 
   aop:
     auto: true

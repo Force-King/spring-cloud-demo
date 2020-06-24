@@ -14,9 +14,6 @@ spring:
       config:
         group: DEFAULT_GROUP
         file-extension: yaml
-        username: nacos
-        password: nacos
-        contextPath: /nacos
 
 hystrix:
   command:
