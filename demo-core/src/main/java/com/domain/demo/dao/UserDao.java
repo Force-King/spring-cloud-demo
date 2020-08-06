@@ -19,4 +19,6 @@ public interface UserDao {
      * @return
      */
     User getUserById(Integer uid);
+
+    int addUser(User user);
 }

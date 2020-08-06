@@ -16,4 +16,16 @@
         from demo_user
     </select>
 
+    <insert id="insert" parameterType="com.domain.demo.entity.User">
+        insert into demo_user (
+            uid,
+            userName,
+            createTime,
+            updateTime
+        )
+        values (
+           #{uid}, #{userName}, #{createTime}, #{updateTime}
+        )
+    </insert>
+
 </mapper>

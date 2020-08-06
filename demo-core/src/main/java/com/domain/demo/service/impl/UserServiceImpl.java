@@ -1,7 +1,9 @@
 package com.domain.demo.service.impl;
 
+import com.domain.demo.annotation.DataSourceAnnotation;
 import com.domain.demo.dao.UserDao;
 import com.domain.demo.entity.User;
+import com.domain.demo.enums.DBName;
 import com.domain.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +27,11 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Integer uid) {
         log.info("uid:{}",uid);
         return userDao.getUserById(uid);
+    }
+
+    @Override
+    @DataSourceAnnotation(dbName = DBName.DEMO)
+    public int addUser(User user) {
+        return userDao.addUser(user);
     }
 }

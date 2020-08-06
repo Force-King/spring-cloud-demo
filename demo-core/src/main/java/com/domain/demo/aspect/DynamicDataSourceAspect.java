@@ -12,7 +12,13 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * @Description 动态多数据源切面
+ * @Classname DynamicDataSourceAspect
+ * @Author CleverApe
+ * @Date 2020-08-03 14:29
+ * @Version V1.0
+ */
 @Aspect
 @Order(-1)
 @Component

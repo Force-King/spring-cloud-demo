@@ -12,4 +12,6 @@ import com.domain.demo.entity.User;
 public interface UserService {
 
     User getUserById(Integer uid);
+
+    int addUser(User user);
 }
