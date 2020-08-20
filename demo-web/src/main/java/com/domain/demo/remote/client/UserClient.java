@@ -1,14 +1,8 @@
 package com.domain.demo.remote.client;
 
+import com.domain.demo.api.IUserRestApi;
 import com.domain.demo.remote.client.fallback.UserClientFallback;
-import com.domain.demo.dto.UserDTO;
-import com.domain.demo.params.UserQueryParam;
-import com.domain.demo.util.RestApiResult;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @Description 用户服务Client
@@ -18,9 +12,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Version V1.0
  */
 @FeignClient(value = "demo-core", fallbackFactory = UserClientFallback.class)
-@RequestMapping("/user")
-public interface UserClient {
-
-    @PostMapping("/getByUid")
-    RestApiResult<UserDTO> getByUid(@Validated @RequestBody UserQueryParam param);
-}
+public interface UserClient extends IUserRestApi {}

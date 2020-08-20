@@ -1,5 +1,6 @@
 package com.domain.demo.remote.client.fallback;
 
+import com.domain.demo.params.UserUpdateParam;
 import com.domain.demo.remote.client.UserClient;
 import com.domain.demo.dto.UserDTO;
 import com.domain.demo.enums.RequestResultEnum;
@@ -27,6 +28,16 @@ public class UserClientFallback implements FallbackFactory<UserClient> {
             @Override
             public RestApiResult<UserDTO> getByUid(UserQueryParam param) {
                 return RestApiResult.buildEnum(RequestResultEnum.SERVER_BUSY);
+            }
+
+            @Override
+            public String addUser(UserUpdateParam param) {
+                return null;
+            }
+
+            @Override
+            public String updateUser(UserUpdateParam param) {
+                return null;
             }
         };
     }

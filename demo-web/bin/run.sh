@@ -21,7 +21,7 @@ function init()
 
     LOG_DIR=${CURRENT_DIR}/logs
 
-    LOG_FILE=${LOG_DIR}/demo.log
+    LOG_FILE=${LOG_DIR}/demo-web-start.log
     PID_FILE=${CURRENT_DIR}/${PROJECT}.pid
     [ ! -d ${LOG_DIR} ] && mkdir -p ${LOG_DIR}
 }
@@ -31,12 +31,15 @@ function start()
     echo "Start service [${PROJECT}]."
     nohup java \
         -Dcom.sun.management.jmxremote \
-        -Dcom.sun.management.jmxremote.port=${JMXPORT} \
+        -Dcom.sun.management.jmxremote.port=${JMX_PORT} \
         -Dcom.sun.management.jmxremote.local.only=true \
         -Dcom.sun.management.jmxremote.authenticate=false \
         -Dcom.sun.management.jmxremote.ssl=false \
-        ${JVMARGS} -cp \
-        ${CURRENT_DIR}/${EXE_LIB} ${EXE_CLASS} >> ${LOG_FILE} 2>&1 &
+        -Dcom.sun.management.jmxremote.rmi.port=${JMX_PORT} \
+        -Djava.rmi.server.hostname=${JMX_IP} \
+        -Dproject.name=${PROJECT} \
+        ${JVMARGS} -jar \
+        ${CURRENT_DIR}/${JAR_NAME} >> ${LOG_FILE} 2>&1 &
     jobs | grep Running > /dev/null
     pid=$!
     if [ $? -eq 0 ];then
