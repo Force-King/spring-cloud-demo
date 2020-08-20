@@ -25,7 +25,7 @@ public class RedisClusterConfig {
     @Value("${spring.redis.cluster.nodes}")
     private String clusterNodeStr;
 
-    @Value("${spring.redis.timeou}")
+    @Value("${spring.redis.timeout}")
     private int timeout;
 
     @Value("${spring.redis.jedis.pool.min-idle}")
