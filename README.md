@@ -15,8 +15,9 @@
 #### 3. 通用组件封装
 
   包含：
-  - 缓存Redis
-  - Codis集群
+  - 本地缓存组件Guava
+  - 分布式缓存集群Codis
+  - 分布式缓存集群Redis-Cluster
   - Redisson分布式锁(单机、集群)
   - 消息中间件RocketMQ
   - 日期工具类

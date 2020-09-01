@@ -14,6 +14,8 @@ spring:
       config:
         group: DEFAULT_GROUP
         file-extension: yaml
+  pid:
+    file: ${spring.application.name}.pid
 
 hystrix:
   command:

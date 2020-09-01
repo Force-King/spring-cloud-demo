@@ -43,7 +43,7 @@ function start()
     jobs | grep Running > /dev/null
     pid=$!
     if [ $? -eq 0 ];then
-        echo ${pid} > ${PID_FILE}
+        # echo ${pid} > ${PID_FILE}
         echo "Start service [${PROJECT}] done."
     else
         echo "Start service [${PROJECT}] failed!"
